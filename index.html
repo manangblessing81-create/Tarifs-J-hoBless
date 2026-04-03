@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections Exclusive - Jehobless</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --gold: #c5a059;
+            --dark: #0a0a0a;
+            --soft-white: rgba(255, 255, 255, 0.85);
+        }
+
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background-color: var(--dark); 
+            color: white;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .bg-luxury {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% -20%, #1a1a1a 0%, #0a0a0a 100%);
+            z-index: -1;
+        }
+
+        .agency-brand {
+            text-align: center;
+            padding-top: 50px;
+            letter-spacing: 12px;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .agency-brand::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+            margin: 15px auto 0;
+        }
+
+        .header-section {
+            padding: 60px 0 80px;
+            text-align: center;
+        }
+
+        .header-section h2 {
+            font-weight: 200;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .header-section h1 {
+            font-weight: 700;
+            font-size: 3.8rem;
+            letter-spacing: -2px;
+            margin: 0;
+        }
+
+        .package-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 0px; 
+            padding: 70px 50px;
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .package-card:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: var(--gold);
+            transform: translateY(-10px);
+        }
+
+        .card-label {
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 35px;
+            display: block;
+        }
+
+        .card-price {
+            font-size: 4.5rem;
+            font-weight: 600;
+            margin-bottom: 45px;
+            line-height: 1;
+        }
+
+        .card-price span {
+            font-size: 1.2rem;
+            font-weight: 200;
+            vertical-align: top;
+            margin-right: 5px;
+            color: var(--gold);
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 60px 0;
+            flex-grow: 1;
+        }
+
+        .feature-list li {
+            padding: 15px 0;
+            font-size: 0.85rem;
+            font-weight: 300;
+            color: var(--soft-white);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-list li i {
+            color: var(--gold);
+            font-size: 0.9rem;
+            width: 30px;
+            margin-right: 15px;
+            text-align: center;
+        }
+
+        /* --- CONFIGURATION DES BOUTONS --- */
+        .btn-luxe {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 22px;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            letter-spacing: 5px;
+            font-weight: 600;
+            transition: 0.4s;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+        }
+
+        .btn-luxe:hover {
+            background: white;
+            color: black;
+            border-color: white;
+        }
+
+        .card-vip {
+            border: 1px solid var(--gold);
+            background: linear-gradient(180deg, rgba(197, 160, 89, 0.04) 0%, rgba(0,0,0,0) 100%);
+        }
+
+        .card-vip .btn-luxe {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: black;
+        }
+
+        .footer-info {
+            margin-top: 100px;
+            padding-bottom: 80px;
+            text-align: center;
+            font-size: 0.65rem;
+            letter-spacing: 3px;
+            color: #444;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 2.5rem; }
+            .package-card { padding: 50px 30px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="bg-luxury"></div>
+
+<div class="agency-brand">JEHOBLESS</div>
+
+<div class="container">
+    <header class="header-section">
+        <h2>L'Excellence Événementielle</h2>
+        <h1>Nos Collections</h1>
+    </header>
+
+    <div class="row g-0 justify-content-center shadow-lg">
+        
+        <div class="col-lg-4">
+            <div class="package-card">
+                <span class="card-label">Collection 01</span>
+                <div class="card-price"><span>$</span>95</div>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-cake-candles"></i> Gâteau Signature</li>
+                    <li><i class="fa-solid fa-camera-retro"></i> Shooting Photo (15)</li>
+                    <li><i class="fa-solid fa-mobile-screen"></i> Vidéo Brute Statut</li>
+                    <li><i class="fa-solid fa-envelope-open-text"></i> Carte de Vœux</li>
+                    <li><i class="fa-solid fa-music"></i> Aubade à la Trompette</li>
+                    <li><i class="fa-solid fa-spa"></i> Bouquet de Saison</li>
+                </ul>
+                <a href="https://wa.me/243854463199?text=Bonjour%20JEHOBLESS,%20je%20souhaite%20réserver%20la%20Collection%2001%20(95$)." target="_blank" class="btn-luxe">Sélectionner</a>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="package-card card-vip">
+                <span class="card-label">Collection 02 • VIP</span>
+                <div class="card-price"><span>$</span>110</div>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-image"></i> Portrait A4 Encadré</li>
+                    <li><i class="fa-solid fa-wine-glass"></i> Vin sans Alcool</li>
+                    <li><i class="fa-solid fa-film"></i> Montage Vidéo Reel</li>
+                    <li><i class="fa-solid fa-star"></i> Shooting Illimité</li>
+                    <li><i class="fa-solid fa-music"></i> Performance Violon</li>
+                    <li><i class="fa-solid fa-heart"></i> Carte de Vœux Luxe</li>
+                </ul>
+                <a href="https://wa.me/243854463199?text=Bonjour%20JEHOBLESS,%20je%20souhaite%20réserver%20la%20Collection%2002%20VIP%20(110$)." target="_blank" class="btn-luxe">Réserver VIP</a>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="package-card">
+                <span class="card-label">Collection 03 • VVIP</span>
+                <div class="card-price"><span>$</span>150</div>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-gift"></i> Cadeau Surprise</li>
+                    <li><i class="fa-solid fa-burst"></i> Boom de Fête (Confetti)</li>
+                    <li><i class="fa-solid fa-map"></i> Affiche & Bouquet</li>
+                    <li><i class="fa-solid fa-compact-disc"></i> Duo Musique & Playlist</li>
+                    <li><i class="fa-solid fa-video"></i> Montage Film HD</li>
+                    <li><i class="fa-solid fa-pen-nib"></i> Livre d'or Express</li>
+                </ul>
+                <a href="https://wa.me/243854463199?text=Bonjour%20JEHOBLESS,%20je%20souhaite%20réserver%20la%20Collection%2003%20VVIP%20(150$)." target="_blank" class="btn-luxe">Réserver VVIP</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer-info">
+        Disponible à Kinshasa • Gombe • Ngaliema • Limete<br>
+        © 2026 JEHOBLESS AGENCE • Créateur de souvenirs uniques.
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
